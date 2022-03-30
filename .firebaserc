@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "funko-shop-web": {
+      "hosting": {
+        "ecommerce": [
+          "funko-shop-web"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "funko-shop-web"
+  }
+}

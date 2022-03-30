@@ -1,0 +1,21 @@
+<h1 align="center">Products</h1>
+<section>
+  <ul>
+    <mat-nav-list class="list-horizontal" *ngFor="let prod of (products$ | async)">
+      <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>{{ prod.name }}</mat-card-title>
+          <mat-card-subtitle><b>${{ prod.price }}</b></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="prod.img" width="250" height="250">
+        <mat-card-content>
+          <p align="center">
+            Stock: {{ prod.stock }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </mat-nav-list>
+      <br>
+  </ul>
+</section>

@@ -1,0 +1,22 @@
+.card {
+  max-width: 250px;
+}
+mat-nav-list.list-horizontal {
+  padding: 0;
+  .mat-list-item {
+    display: inline-block;
+    height: auto;
+    width: auto;
+  }
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.header-image {
+  background-image: url('https://drive.google.com/uc?id=1Rteo8sQMwe_b-A6RaYCYTdiKxRsZ0syW');
+  background-size: cover;
+}
+

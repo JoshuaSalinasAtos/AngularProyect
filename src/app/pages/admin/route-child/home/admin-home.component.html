@@ -1,0 +1,30 @@
+<h1 align="center">Showcase</h1>
+<section>
+  
+  <ul>
+    <mat-nav-list fxLayout *ngFor="let funko of (funkos$ | async)">
+      <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>{{ funko.name }}</mat-card-title>
+          <mat-card-subtitle><b>${{ funko.price }}</b></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [routerLink]="['../editor',funko.id]" src="{{ funko.img }}" width="250" height="250">
+        <mat-card-content>
+          <p align="center">
+            Stock: {{ funko.stock }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-button class="buttonDelete" (click)="deleteFunko(funko.id)">Delete</button>
+          
+          <button mat-button>Add to Sell</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-nav-list>
+      
+      <br>
+    
+  </ul>
+</section>
+

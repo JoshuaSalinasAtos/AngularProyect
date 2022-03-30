@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<section class="login">
+  <main>
+    <form [formGroup]="signInForm" (ngSubmit)="signIn(signInForm)">
+      <div class="input">
+        <label class="text-black" for="email-input" align="center">Email</label>
+        <input type="email" id="email-input" placeholder="type your email here"  formControlName="email">
+      </div>
+      <div class="input">
+        <label class="form-group mt-3 text-Black" for="password-input" align="center">Password</label>
+        <input type="password" placeholder="type your password" id="password-input" formControlName="password">
+      </div>
+      <div class="form-group mt-2 text-center">
+        <button type="submit" [disabled]="!signInForm.valid">
+          sign in
+        </button>
+        <div class="form-group mt-3"><button (click)="onGoogleLogin()" class="btn btn-sm btn-google">
+          Google
+        </button>
+      </div>
+      </div>
+    </form>
+  </main>
+</section>

@@ -1,0 +1,25 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  main {
+    padding: 1.25em;
+    background-color: var(--main);
+    .input {
+      display: flex;
+      flex-direction: column;
+      label {
+        margin-bottom: .25em;
+        font-size: 1.15em;
+      }
+      input {
+        padding: .25em .5em;
+      }
+    }
+  }
+  .btn-google{
+    background: #dd4b39;
+    color: #ffff;
+    width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+<section>
+  <form (ngSubmit)="createFunko(productForm)" [formGroup]="productForm">
+  
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label >Funko name</mat-label>
+          <input matInput formControlName="name">
+        </mat-form-field>
+       
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label >Funko brand</mat-label>
+          <input matInput formControlName="brand">
+        </mat-form-field>
+        
+     <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label >Funko price</mat-label>
+          <input matInput formControlName="price">
+        </mat-form-field>
+       
+       <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label >Funko stock</mat-label>
+          <input matInput formControlName="stock">
+        </mat-form-field>
+  
+  
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label >Url img:</mat-label>
+        <textarea matInput placeholder="http://example.img" formControlName="img"></textarea>
+      </mat-form-field>
+    </p>
+    <div class="example-button-container">
+      <button mat-button color="accent" type="submit">Guardar</button>
+      <button mat-fab color="primary" aria-label="delete">
+        <mat-icon (click)="cleanFields()">delete</mat-icon>
+      </button>
+    </div>
+  </form>
+</section>
+
+

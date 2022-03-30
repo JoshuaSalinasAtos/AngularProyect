@@ -1,0 +1,26 @@
+<h1 align="center">Shopping Cart</h1>
+<section>
+  <ul>
+    <mat-nav-list fxLayout *ngFor="let shop of (funko$ | async)">
+      <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>{{ shop.name }}</mat-card-title>
+          <mat-card-subtitle><b>${{ shop.price }}</b></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="shop.img" width="250" height="250">
+        <mat-card-content>
+          <p align="center">
+            Stock: {{ shop.stock }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-button type="button" (click)="buyFunko(shop)">Buy</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-nav-list>
+      
+      <br>
+    
+  </ul>
+</section>

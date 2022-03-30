@@ -1,0 +1,21 @@
+<h1 align="center">Products</h1>
+<section>
+  <ul>
+    <mat-nav-list class="list-horizontal" *ngFor="let shop of (purchaseList$ | async)">
+      <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>{{ shop.funko.name }}</mat-card-title>
+          <mat-card-subtitle><b>${{ shop.funko.price }}</b></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]='shop.funko.img' width="250" height="250">
+        <mat-card-content>
+          <p align="center">
+            Stock: {{ shop.funko.stock }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </mat-nav-list>
+      <br>
+  </ul>
+</section>
